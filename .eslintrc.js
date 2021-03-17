@@ -1,35 +1,21 @@
 module.exports = {
-  root: true,
-  parser: 'babel-eslint',
-  parserOptions: {
-    sourceType: 'module'
-  },
-  env: {
-    browser: true,
-    node: true,
-    es6: true,
-  },
-  extends: 'eslint:recommended',
-  globals: {
-    Vue: true,
-    VueRouter: true,
-    ELEMENT: true,
-    Vuex: true,
-  },
-  // required to lint *.vue files
-  plugins: [
-    'html'
-  ],
-  // check if imports actually resolve
-  'settings': {
-    'import/resolver': {
-      'webpack': {
-        'config': 'build/webpack.base.conf.js'
-      }
-    }
-  },
-  // add your custom rules here
-  //it is base on https://github.com/vuejs/eslint-config-vue
+    env: {
+      browser: true,
+      node: true,
+      es6: true,
+    },
+    extends: [
+      'eslint:recommended',
+      'plugin:vue/essential'
+    ],
+    parserOptions: {
+      ecmaVersion: 10,
+      sourceType: 'module'
+    },
+    'plugins': [
+      'html',
+      'vue'
+    ],
   'rules': {
     'accessor-pairs': 2,                //getter/setter方法需要成对出现
     'arrow-spacing': [2, {              //=>的前/后括号 此为前需空格，后需空格
@@ -43,7 +29,7 @@ module.exports = {
     'camelcase': [0, {                  //双驼峰命名（此处对命名不做限制）
       'properties': 'always'
     }],
-    // 'comma-dangle': [2, 'never'],       //对象字面量项尾不能有逗号
+    'comma-dangle': [2, 'never'],       //对象字面量项尾不能有逗号
     'comma-spacing': [2, {              //逗号前不可以有空格，逗号后需要有空格
       'before': false,
       'after': true
@@ -201,5 +187,4 @@ module.exports = {
     }],
     'array-bracket-spacing': [2, 'never']   // 用数组字面量定义数组时数组元素前后是否加空格， 此为数组元素前后不能带空格，
   }
-}
-
+};
