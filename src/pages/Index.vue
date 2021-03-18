@@ -13,7 +13,19 @@ export default {
   },
   methods: {
     clicks() {
-      debugger
+      // const a = axios.create({
+      //   baseURL: 'https://apipro.playinjoy.com',
+      //   timeout: 2000
+      // })
+      this.$http.post('/legion/bstock').then(res => {
+        console.log(res, 'res')
+      })
+      // this.$axios.post('https://apipro.playinjoy.com/legion/bstock').then(res => {
+      //   console.log(res, 'res')
+      // })
+      // this.$http.post('/legion/bstock').then(res => {
+      //   console.log(res)
+      // })
       console.log(this)
     }
   }

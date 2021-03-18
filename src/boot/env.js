@@ -1,6 +1,5 @@
 const env = {
-  baseURl: process.env.NODE_ENV === 'localhost' ? 'localhost' : 'https://gpcard.playinjoy.com/body',
-  timeout: 5000,
-  withCredentials: true
+  baseURL: 'https://apipro.playinjoy.com',
+  timeout: 2000
 }
 export default env
