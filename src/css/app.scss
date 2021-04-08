@@ -1,1 +1,15 @@
-// app global css in SCSS form
+html,body {
+  height: 100%;
+  overflow: hidden;
+}
+#q-app {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+input {
+  outline: none;
+}
